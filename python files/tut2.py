@@ -47,20 +47,25 @@ class Ui_MainWindow(object):
         self.actionNew.setObjectName("actionNew")
         self.actionSave = QtWidgets.QAction(MainWindow)
         self.actionSave.setObjectName("actionSave")
-        self.actionSave_2 = QtWidgets.QAction(MainWindow)
-        self.actionSave_2.setObjectName("actionSave_2")
+        self.actionPaste = QtWidgets.QAction(MainWindow)
+        self.actionPaste.setObjectName("actionPaste")
         self.actionCopy = QtWidgets.QAction(MainWindow)
         self.actionCopy.setObjectName("actionCopy")
 
         self.menuFile.addAction(self.actionNew)
         self.menuFile.addAction(self.actionSave)
         self.menuEdit.addAction(self.actionCopy)
-        self.menuEdit.addAction(self.actionSave_2)
+        self.menuEdit.addAction(self.actionPaste)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuEdit.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        self.actionNew.triggered.connect(lambda: self.clicked("New is clicked"))
+        self.actionSave.triggered.connect(lambda: self.clicked("Save is clicked"))
+        self.actionCopy.triggered.connect(lambda: self.clicked("Copy is clicked"))
+        self.actionPaste.triggered.connect(lambda: self.clicked("Paste is clicked"))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -75,13 +80,16 @@ class Ui_MainWindow(object):
         self.actionSave.setText(_translate("MainWindow", "Save"))
         self.actionSave.setStatusTip(_translate("MainWindow", "Save a File"))
         self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
-        self.actionSave_2.setText(_translate("MainWindow", "Paste"))
-        self.actionSave_2.setStatusTip(_translate("MainWindow", "Paste a File"))
-        self.actionSave_2.setShortcut(_translate("MainWindow", "Ctrl+V"))
+        self.actionPaste.setText(_translate("MainWindow", "Paste"))
+        self.actionPaste.setStatusTip(_translate("MainWindow", "Paste a File"))
+        self.actionPaste.setShortcut(_translate("MainWindow", "Ctrl+V"))
         self.actionCopy.setText(_translate("MainWindow", "Copy"))
         self.actionCopy.setStatusTip(_translate("MainWindow", "Copy a File"))
         self.actionCopy.setShortcut(_translate("MainWindow", "Ctrl+C"))
 
+    def clicked(self, text):
+        self.label.setText(text)
+        self.label.adjustSize()
 
 if __name__ == "__main__":
     import sys
