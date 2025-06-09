@@ -23,9 +23,11 @@ pyqt/
 ├── python files/         # .py scripts with PyQt5 logic
 │   ├── tut1.py
 │   └── tut2.py
+│   └── tut3.py
 │
 ├── ui files/             # .ui files designed using Qt Designer
 │   └── tut2.ui
+│   └── tut3.ui
 │
 └── .gitignore            # ignores temp/icons etc.
 
