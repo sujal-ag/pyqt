@@ -62,7 +62,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.actionNew.triggered.connect(lambda: self.clicked("New is clicked"))
+        self.actionNew.triggered.connect(lambda: self.clicked("New is clicked"))  # can be triggered using the shortcut as well
         self.actionSave.triggered.connect(lambda: self.clicked("Save is clicked"))
         self.actionCopy.triggered.connect(lambda: self.clicked("Copy is clicked"))
         self.actionPaste.triggered.connect(lambda: self.clicked("Paste is clicked"))
