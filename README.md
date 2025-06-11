@@ -21,15 +21,17 @@
 pyqt/
 │
 ├── python files/         # .py scripts with PyQt5 logic
-│   ├── tut1.py
-│   └── tut2.py
-│   └── tut3.py
-|   └── tut4.py
+│   ├── custom.py
+│   └── menubar.py
+│   └── photochanger.py
+|   └── popup.py
+|   └── xor.py
 │
 ├── ui files/             # .ui files designed using Qt Designer
-│   └── tut2.ui
-│   └── tut3.ui
-|   └── tut4.ui
+│   └── menubar.ui
+│   └── photochanger.ui
+|   └── popup.ui
+|   └── xor.ui
 │
 └── .gitignore            # ignores temp/icons etc.
 
