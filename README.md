@@ -24,10 +24,12 @@ pyqt/
 │   ├── tut1.py
 │   └── tut2.py
 │   └── tut3.py
+|   └── tut4.py
 │
 ├── ui files/             # .ui files designed using Qt Designer
 │   └── tut2.ui
 │   └── tut3.ui
+|   └── tut4.ui
 │
 └── .gitignore            # ignores temp/icons etc.
 
